@@ -32,15 +32,15 @@
           <h3 class="mb-1 text-center">Welcome Back</h3>
           <p class="text-muted text-center small mb-4">Login to continue</p>
 
-          <form id="loginForm">
+          <form id="loginForm" method="post">
 
             <div id="loginMessage" class="text-center mb-2 small"></div>
             <div class="mb-3">
-              <input type="email" class="form-control shadow-none border" id="email" name="name" placeholder="Enter Name" required>
+              <input type="text" class="form-control shadow-none border" id="email" name="name" placeholder="Enter Name" required>
             </div>
             <div id="loginMessage" class="text-center mb-2 small"></div>
             <div class="mb-3">
-              <input type="email" class="form-control shadow-none border" id="email" name="gender" placeholder="Enter Gender" required>
+              <input type="text" class="form-control shadow-none border" id="email" name="gender" placeholder="Enter Gender" required>
             </div>
             <div id="loginMessage" class="text-center mb-2 small"></div>
             <div class="mb-3">
@@ -56,10 +56,17 @@
                 </div>
             </div>
 
+            <div class="mb-3">
+              <input type="text" class="form-control shadow-none border" id="email" name="position" placeholder="Enter Gender" required>
+            </div>
+            <div id="loginMessage" class="text-center mb-2 small"></div>
+            <div class="mb-3">
+              <input type="number" class="form-control shadow-none border" id="email" name="salary" placeholder="example@mail.com" required>
+            </div>
             
 
             <div class="d-grid">
-              <button type="submit" id="btnLogin" class="bg-etec-color border py-2 text-light rounded" style="background-color: blue;" >Login</button>
+              <button type="submit" name="submit" id="btnLogin" class="bg-etec-color border py-2 text-light rounded" style="background-color: blue;" >Login</button>
             </div>
           </form>
 
@@ -84,21 +91,19 @@
             <th>Action</th>
         </tr>
     </thead>
-    <tbody>
-        <tr>
-            <td>1</td>
-            <td>1</td>
-            <td>1</td>
-            <td>1</td>
-            <td>1</td>
-        </tr>
-    </tbody>
   </table>
-
 </body>
 </html>
-include("simpleExercie");
-if(){
-    $name = $post['name']
-    $gender =
-}
+<?php
+  include ('Employee.php');
+  if(isset($_POST['submit'])){
+    $name = $_POST['name'];
+    $gender = $_POST['gender'];
+    $email = $_POST['email'];
+    $password = $_POST['password'];
+    $position = $_POST['position'];
+    $salary = $_POST['salary'];
+    $emp = new Employee($name,$gender,$email,$password,$position,$salary);
+    $emp->displaydata();
+  }
+?>
