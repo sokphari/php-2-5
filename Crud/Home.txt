@@ -1,0 +1,16 @@
+Home Work Topic About Products Crud Operation
+
+table in db --> tb_students
+
+pro_id   (smallint) primary key 
+pro_name varchar(20) 
+pro_qty  (int)
+pro_pric decimal(10,2)
+stock    (smallint)
+image    varchar(255)
+
+
+dateline next week don't forget to do it , 
+because it is the mini project for practice your exercise 
+
+
