@@ -16,6 +16,7 @@
 </head>
 <body>
     <h3>Welcome to Admin Dashboard</h3>
+    <a href="../auth/logout.php">logout</a>
 </body>
 </html>
 

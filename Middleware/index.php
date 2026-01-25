@@ -9,6 +9,6 @@
     
 </body>
     <script>
-        window.location.href = '../client/index';
+        window.location.href = 'client/index';
     </script>
 </html>
